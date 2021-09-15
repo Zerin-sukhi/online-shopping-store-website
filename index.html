@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>Happy Store</title>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -18,23 +18,28 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <h1 class="wc">Welcome to Happy Store!!</h1>
+  </header>
   <main class="main">
     <div class="search-field">
       <div class="search-box">
         <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+        <button type="button" class="btn btn-success search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
+          <span>Search</span>
         </button>
       </div>
     </div>
+    <!-- products grid starting from here -->
     <div class="row">
+      <!-- for product column at left side  -->
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
-          <h1></h1>
+        <div id="all-products" class="all-products">
+
         </div>
       </div>
+      <!-- for cart  -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
@@ -48,39 +53,50 @@
               </tr>
             </thead>
             <tbody>
+              <!-- total added-products part starting here  -->
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <td> <span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
+
+              <!-- this is for Price part  -->
               <tr>
                 <th>Price:</th>
                 <td>$ <span id="price">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
+
+              <!-- Delivery-Charge: part  -->
               <tr>
                 <th>Delivery-Charge:</th>
                 <td>$ <span id="delivery-charge">20</span></td>
                 <td></td>
                 <td></td>
               </tr>
+
+              <!-- Total-Tax: part  -->
               <tr>
                 <th>Total-Tax:</th>
                 <td>$ <span id="total-tax">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
+
+              <!-- Total price part  -->
               <tr>
-                <th scope="row">Total</th>
+                <th scope="row">Total:</th>
                 <td colspan="2">$ <span id="total">0</span></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-success text-center">
+              <span class="buy-text">Buy Now</span>
+            </button>
           </div>
         </div>
       </div>
